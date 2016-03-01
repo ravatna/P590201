@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65E7F75E-5C65-423A-923C-034204408AA3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OfficeSupport</RootNamespace>
+    <AssemblyName>OfficeSupport</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmListAssignedTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListAssignedTask.Designer.cs">
+      <DependentUpon>frmListAssignedTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbManager.cs" />
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomerSearch.Designer.cs">
+      <DependentUpon>FrmCustomerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindCustomer.Designer.cs">
+      <DependentUpon>frmFindCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindSite.Designer.cs">
+      <DependentUpon>frmFindSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGoodReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGoodReceive.Designer.cs">
+      <DependentUpon>frmGoodReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListContract.Designer.cs">
+      <DependentUpon>frmListContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManipulateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManipulateContract.Designer.cs">
+      <DependentUpon>frmManipulateContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManipulateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManipulateCustomer.Designer.cs">
+      <DependentUpon>frmManipulateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServiceTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServiceTask.Designer.cs">
+      <DependentUpon>frmServiceTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetupCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetupCompany.Designer.cs">
+      <DependentUpon>FrmSetupCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="frmListAssignedTask.resx">
+      <DependentUpon>frmListAssignedTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerSearch.resx">
+      <DependentUpon>FrmCustomerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindCustomer.resx">
+      <DependentUpon>frmFindCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindSite.resx">
+      <DependentUpon>frmFindSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGoodReceive.resx">
+      <DependentUpon>frmGoodReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListContract.resx">
+      <DependentUpon>frmListContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManipulateContract.resx">
+      <DependentUpon>frmManipulateContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManipulateCustomer.resx">
+      <DependentUpon>frmManipulateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServiceTask.resx">
+      <DependentUpon>frmServiceTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetupCompany.resx">
+      <DependentUpon>FrmSetupCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05_Edit_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04_Save_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02_Recycle_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01_Warning_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_Search_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14_Delete_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15_Photo_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15_Tick_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17_Paste_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19_Left_Arrow_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20_Right_Arrow_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21_Up_Arrow_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22_Down_Arrow_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29_House_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30_Office_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41_Clock_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_add_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_delete_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_add_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_delete_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line_Graph_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Map_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pie_Chart_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ruler_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d bar chart1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abort1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anchor1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apply1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bad mark1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue key1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue tag1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bottom1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car key1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compass1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Danger1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delivery1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dial1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disaster1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollar1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eject1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E-mail1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erase1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Euro1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fall1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fast-forward1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favourites1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First record1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forbidden1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Free bsd1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go back1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go forward1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Good-mark1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green tag1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help book 3d1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help book1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hint1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\How-to1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hungup1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last recor1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left-right1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lightning1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Linux1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Load1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_green1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Low rating1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medium rating1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Message1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mobile-phone1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modify1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Movie1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New document1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next track1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No-entry1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone number1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pie chart1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pinion1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Playback1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play-music1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous record1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Problem1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Raise1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Record1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red mark1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red star1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red tag1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Retort1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rewind1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sad1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping cart1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smile1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop sign1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sync1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Target1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxi1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terminate1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text preview1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thumbs down1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thumbs up1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turn off1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up-down1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User group1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wrench1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yes1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="error_logs.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
